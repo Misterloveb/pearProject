@@ -5,7 +5,7 @@ export default {
     SET_LOGGED({commit}, data) {
         setStore('tokenList', data.tokenList);
         setStore('userInfo', data.userInfo);
-        return commit('SET_LOGGED', data);
+        commit('SET_LOGGED', data);
     },
     SET_USER({commit}, data) {
         setStore('userInfo', data);
@@ -57,11 +57,11 @@ export default {
     },
     setOrganizationList({commit}, data) {
         setStore('organizationList', data);
-        return commit('setOrganizationList', data);
+        commit('setOrganizationList', data);
     },
     setCurrentOrganization({commit}, data) {
         setStore('currentOrganization', data);
-        return commit('setCurrentOrganization', data);
+        commit('setCurrentOrganization', data);
     },
     setSystem({commit}, data) {
         setStore('system', data);

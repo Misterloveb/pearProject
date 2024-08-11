@@ -511,7 +511,7 @@
             },
             onLoadMoreEvents(page, PageSize) {
                 this.events.loadingMore = true;
-                this.events.page++;
+                this.events.page = page;
                 this.getEvents();
             },
             confirmJoinEvents(events, status) {

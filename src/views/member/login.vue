@@ -295,8 +295,6 @@
             },
             loginSuccess(res, org) {
                 const menu = getStore('menu', true);
-                console.log('menu');
-                console.log(menu);
                 if (menu) {
                     let routes = this.$router.options.routes;
                     menu.forEach(function (v) {
@@ -368,8 +366,6 @@
                         tokenList: res.data.tokenList
                     };
                     let currentOrganization = getStore('currentOrganization', true);
-                    console.log('currentOrganization');
-                    console.log(currentOrganization);
                     const organizationList = res.data.organizationList;
                     await app.$store.dispatch('SET_LOGGED', obj);
                     await app.$store.dispatch('setOrganizationList', organizationList);
@@ -381,7 +377,6 @@
                             currentOrganization = organizationList[0];
                         }
                     }
-                    console.log(currentOrganization);
                     await app.$store.dispatch('setCurrentOrganization', currentOrganization);
                     await app.$store.dispatch('GET_MENU').then(() => {
                         app.loginSuccess(res, currentOrganization);
